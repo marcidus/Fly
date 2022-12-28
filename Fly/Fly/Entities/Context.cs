@@ -1,12 +1,11 @@
-﻿using Fly;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fly
+namespace Fly.Entities
 {
     public class Context : DbContext
     {
@@ -18,7 +17,7 @@ namespace Fly
         public DbSet<Passenger> PassengerSet { get; set; }
         public DbSet<Seat> SeatSet { get; set; }
 
-        public static string ConnectionString { get; set; } = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Alexandre The Goat\Documents\fly2.0.mdf"";Integrated Security=True;Connect Timeout=30";
+        public static string ConnectionString { get; set; } = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\jerem\Documents\FlySierre.mdf;Integrated Security=True;Connect Timeout=30";
 
         public Context() { }
 

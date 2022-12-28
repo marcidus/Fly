@@ -12,7 +12,7 @@ namespace Fly
         [Key]
         public int FlightId { get; set; }
         public DateTime Date { get; set; }
-        public DateTime Time { get; set; }
+        
         public string Depart { get; set; }
         public string Destination { get; set; }
         public virtual Paiement Paiement { get; set; }

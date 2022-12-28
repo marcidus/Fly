@@ -11,7 +11,6 @@ namespace Fly
     {
         [Key]
         public int PassengerID { get; set; }
-        public DateTime CustomerSince { get; set; }
         public DateTime Birthday { get; set; }
         public string Email { get; set; }
         public string FullName { get; set; }

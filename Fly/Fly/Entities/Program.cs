@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Fly
+namespace Fly.Entities
 {
-    class Program
+    internal class Program
     {
         static Context ctx;
 
@@ -18,6 +18,11 @@ namespace Fly
                 Console.WriteLine("Database already exists");
 
             Console.WriteLine("done");
+        }
+
+        public static void importData()
+        {
+            var Passenger1 = new Passenger {Birthday= new DateTime(1992, 07, 22),Email = "jeremie@gmail.com", FullName="Dellea", Surname = "Jeremie",   };
         }
     }
 }
