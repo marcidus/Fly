@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Fly;
+using Fly.Models;
 
 namespace FlyAPI.Controllers
 {
@@ -66,6 +67,51 @@ namespace FlyAPI.Controllers
             }
             return CurrentlyPrice;
         }
+
+       
+        // C. Books a ticket on a flight
+       
+        [HttpPut("BookFlight/{passengerId}&{flightId}")]
+        public async Task<IActionResult> BuyFlight(int passengerId, int flightId)
+        {
+            var p = await _context.PassengerSet.FindAsync(passengerId);
+            var f = await _context.FlightSet.FindAsync(flightId);
+            if (p == null || f == null )
+            {
+                return NotFound();
+            }
+            Booking booking = new Booking();
+            booking.PassengerID = p.PersonID;
+            booking.Passenger = p;
+            booking.Flight = f;
+            booking.SalePrice = calculatePrice(f);
+            _context.BookingSet.Add(booking);
+            f.FreeSeat -= 1;
+            f.occupation = (Convert.ToDouble(f.NbrSeat) - Convert.ToDouble(f.FreeSeat)) / Convert.ToDouble(f.NbrSeat);
+            _context.Entry(f).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        // d. Return the total sale price of all tickets sold for a flight
+        [HttpGet("GetTotalSalePriceOfFlight/{flightId}")]
+        public async Task<ActionResult<double>> GetTotalSalePriceFlight(int flightId)
+        {
+            var sales = await _context.BookingSet.Where(s => s.Flight.FlightId == flightId).ToListAsync();
+            double total = sales.Sum(s => s.SalePrice);
+            return total;
+        }
+
+        //e. Average sale price from all tickets sold for a destination
+        [HttpGet("AverageTicketPrice/{destination}")]
+        public async Task<ActionResult<double>> GetAverageSalePriceForDestination(string destination)
+        {
+            var sales = await _context.BookingSet.Where(s => s.Flight.Destination.Equals(destination)).Select(f => f.Flight.FlightId).ToListAsync();
+            double avg = _context.BookingSet.Where(e => sales.Contains(e.Flight.FlightId)).Average(t => t.SalePrice);
+            return avg;
+        }
+
+
     }
 
 }
