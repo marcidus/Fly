@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Fly.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Fly
     {
         public DbSet<Airline> AirlineSet { get; set; }
         public DbSet<Baggage> BaggageSet { get; set; }
-        public DbSet<FlightPassenger> FlightsPassengerSet { get; set; }
+        public DbSet<Pilot> PilotSet { get; set; }
         public DbSet<Flight> FlightSet { get; set; }
         public DbSet<Passenger> PassengerSet { get; set; }
         public DbSet<Seat> SeatSet { get; set; }

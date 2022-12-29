@@ -46,7 +46,7 @@ namespace FlyAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPassenger(int id, Passenger passenger)
         {
-            if (id != passenger.PassengerID)
+            if (id != passenger.PersonID)
             {
                 return BadRequest();
             }
@@ -80,7 +80,7 @@ namespace FlyAPI.Controllers
             _context.PassengerSet.Add(passenger);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPassenger", new { id = passenger.PassengerID }, passenger);
+            return CreatedAtAction("GetPassenger", new { id = passenger.PersonID }, passenger);
         }
 
         // DELETE: api/Passengers/5
@@ -101,7 +101,7 @@ namespace FlyAPI.Controllers
 
         private bool PassengerExists(int id)
         {
-            return _context.PassengerSet.Any(e => e.PassengerID == id);
+            return _context.PassengerSet.Any(e => e.PersonID == id);
         }
     }
 }
