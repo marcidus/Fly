@@ -17,6 +17,8 @@ namespace Fly
         public string Destination { get; set; }
         public double Price { get; set; }
         public double occupation { get; set; }
+        public int NbrSeat { get; set; }
+        public int FreeSeat { get; set; }
         public virtual Pilot Pilot { get; set; }
         public virtual Airline Airline { get; set; }
         public virtual Passenger Passenger { get; set; }

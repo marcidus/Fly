@@ -15,7 +15,7 @@ namespace Fly
         public DbSet<Pilot> PilotSet { get; set; }
         public DbSet<Flight> FlightSet { get; set; }
         public DbSet<Passenger> PassengerSet { get; set; }
-        public DbSet<Seat> SeatSet { get; set; }
+       
 
         public static string ConnectionString { get; set; } = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\jerem\Documents\FlySierre.mdf;Integrated Security=True;Connect Timeout=30";
 
