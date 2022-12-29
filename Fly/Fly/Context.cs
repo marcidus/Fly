@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fly.Entities
+namespace Fly
 {
     public class Context : DbContext
     {
@@ -13,7 +13,6 @@ namespace Fly.Entities
         public DbSet<Baggage> BaggageSet { get; set; }
         public DbSet<FlightPassenger> FlightsPassengerSet { get; set; }
         public DbSet<Flight> FlightSet { get; set; }
-        public DbSet<Paiement> PaiementSet { get; set; }
         public DbSet<Passenger> PassengerSet { get; set; }
         public DbSet<Seat> SeatSet { get; set; }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fly.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,12 +13,13 @@ namespace Fly
         [Key]
         public int FlightId { get; set; }
         public DateTime Date { get; set; }
-        
         public string Depart { get; set; }
         public string Destination { get; set; }
-        public virtual Paiement Paiement { get; set; }
+        public double Price { get; set; }
+        public double occuaption { get; set; }
+        public virtual Pilot Pilot { get; set; }
         public virtual Airline Airline { get; set; }
-        public virtual ICollection<FlightPassenger> FlightPassengers { get; set; }
+        public virtual Passenger Passenger { get; set; }
        
     }
 }

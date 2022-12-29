@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Fly
 {
-    public class Paiement
+    public class Seat
     {
         [Key]
-        public int PaiementId { get; set; }
-        public string Devise { get; set; }
-        public float Montant { get; set; }
-        
+        public int SeatNum { get; set; }
+        public String Classe { get; set; }
+        public Boolean Booked { get; set; }
+
     }
 }
