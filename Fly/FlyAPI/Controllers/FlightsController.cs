@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Fly;
 using Fly.Models;
+using FlyAPI.Model;
+using API.Extensions;
 
 namespace FlyAPI.Controllers
 {
@@ -111,6 +113,18 @@ namespace FlyAPI.Controllers
             return avg;
         }
 
+        [HttpGet("FinalTicket/{destination}")]
+        public async Task<ActionResult<IEnumerable<FinalTicket>>> GetFinalTicket(string destination)
+        {
+            
+            var flights = await _context.FlightSet.Where(x => x.Destination.ToLower().Equals(destination.ToLower())).ToListAsync();
+            List<FinalTicket> result = new List<FinalTicket>();
+            foreach (var flight in flights)
+            {
+                result.AddRange(flight.ConvertToFinalTicket());
+            }
+            return result;
+        }
 
     }
 

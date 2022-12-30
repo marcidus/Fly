@@ -17,6 +17,7 @@ namespace Fly
         public string Depart { get; set; }
         public string Destination { get; set; }
         public double Price { get; set; }
+        public int FlightNo { get; set; }
         public double occupation { get; set; }
         public int NbrSeat { get; set; }
         public int FreeSeat { get; set; }
