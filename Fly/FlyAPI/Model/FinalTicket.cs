@@ -2,6 +2,9 @@
 {
     public class FinalTicket
     {
+
+        /*en a t'on besoin? vu qu'on a l'entité flight?*/
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int FlightNbr { get; set; }

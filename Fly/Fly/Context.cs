@@ -19,7 +19,7 @@ namespace Fly
        
         public DbSet<Booking> BookingSet { get; set; }
 
-        public static string ConnectionString { get; set; } = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\jerem\Documents\FlySierre.mdf;Integrated Security=True;Connect Timeout=30";
+        public static string ConnectionString { get; set; } = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Alexandre The Goat\Documents\fly2.0.mdf"";Integrated Security=True;Connect Timeout=30";
 
         public Context() { }
 
