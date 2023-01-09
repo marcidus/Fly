@@ -1,5 +1,4 @@
 ﻿using Fly.Entities;
-using Fly.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -13,7 +12,6 @@ namespace Fly
     {
        
         public virtual ICollection<Baggage> Baggages { get; set; }
-        public virtual ICollection<Booking> BookingSet { get; set; }
-       // public virtual Flight Flight { get; set; } il faut enlever car la clé secondaire est déjà dans flight
+       
     }
 }

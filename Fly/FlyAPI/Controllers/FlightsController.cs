@@ -113,6 +113,7 @@ namespace FlyAPI.Controllers
             return avg;
         }
 
+        //f.
         [HttpGet("FinalTicket/{destination}")]
         public async Task<ActionResult<IEnumerable<FinalTicket>>> GetFinalTicket(string destination)
         {

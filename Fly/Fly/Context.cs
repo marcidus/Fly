@@ -1,5 +1,4 @@
 ﻿using Fly.Entities;
-using Fly.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,7 +15,6 @@ namespace Fly
         public DbSet<Pilot> PilotSet { get; set; }
         public DbSet<Flight> FlightSet { get; set; }
         public DbSet<Passenger> PassengerSet { get; set; }
-       
         public DbSet<Booking> BookingSet { get; set; }
 
         public static string ConnectionString { get; set; } = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Alexandre The Goat\Documents\fly2.0.mdf"";Integrated Security=True;Connect Timeout=30";
