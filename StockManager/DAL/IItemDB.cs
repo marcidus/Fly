@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DTO;
+
+namespace DAL
+{
+    public interface IItemDB
+    {
+        Task<IEnumerable<Item>> GetAllItems();
+        Task<Item> GetItemById(int id);
+        Task<Item> AddItem(Item item);
+        Task<Item> UpdateItem(Item item);
+        Task<bool> DeleteItem(int id);
+    }
+}

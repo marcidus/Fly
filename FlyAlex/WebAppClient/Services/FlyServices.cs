@@ -11,7 +11,7 @@ namespace WebAppClient.Services
         public FlyServices(HttpClient client)
         {
             _client = client;
-            _baseURI = "https://localhost:7025/api/";
+            _baseURI = "https://localhost:7025/";
         }
 
         public async Task<bool> BookFlight(int idPassenger, int idFlight)

@@ -8,8 +8,6 @@ namespace FlyAlex.Models
 {
     public class Passenger : Person
     {
-        public virtual ICollection<Baggage> Baggages { get; set; }
-        public virtual ICollection<Flight> Flights { get; set; }
         public virtual ICollection<Booking> Bookings { get; set; }
     }
 }

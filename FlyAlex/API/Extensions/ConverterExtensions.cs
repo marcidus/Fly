@@ -28,7 +28,7 @@ namespace API.Extensions
             return tickets;
         }
 
-        public static FlightM ConvertTolFlightM(this Flight flight)
+        public static Models.FlightM ConvertTolFlightM(this FlyAlex.Models.Flight flight)
         {
             FlightM result = new FlightM();
             result.FlightId = flight.FlightId;

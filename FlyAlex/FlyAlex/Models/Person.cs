@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FlyAlex.Models
 {
-    public abstract class Person
+    public class Person
     {
         [Key]
         public int PersonID { get; set; }

@@ -20,5 +20,7 @@ namespace FlyAlex.Models
         public int NbrSeat { get; set; }
         public int FreeSeat { get; set; }
         public virtual ICollection<Booking> Bookings { get; set; }
+        public virtual Airline airline { get; set; }
+        public virtual Pilot Pilot { get; set; }
     }
 }

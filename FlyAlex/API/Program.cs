@@ -1,8 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using FlyAlex;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers();  // Fait l'injection de dépendance dans le controlleur
+builder.Services.AddDbContext<Context>(opt => opt.UseSqlServer(Context.ConnectionString));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

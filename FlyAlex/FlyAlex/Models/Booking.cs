@@ -12,7 +12,7 @@ namespace FlyAlex.Models
         [Key]
         public int BookingID { get; set; }
         public double SalePrice { get; set; }
-        public virtual Passenger? Passenger { get; set; }
+        public virtual Passenger Passenger { get; set; }
         public virtual Flight Flight { get; set; }
     }
 }

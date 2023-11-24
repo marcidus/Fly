@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineService", "OnlineService\OnlineService.csproj", "{04A2A3FB-3D74-41B8-B096-013B7653D0C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIOnlineService", "APIOnlineService\APIOnlineService.csproj", "{C724AA7C-3C17-4F3B-9F64-5DFE41F04126}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04A2A3FB-3D74-41B8-B096-013B7653D0C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04A2A3FB-3D74-41B8-B096-013B7653D0C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04A2A3FB-3D74-41B8-B096-013B7653D0C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A2A3FB-3D74-41B8-B096-013B7653D0C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C724AA7C-3C17-4F3B-9F64-5DFE41F04126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C724AA7C-3C17-4F3B-9F64-5DFE41F04126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C724AA7C-3C17-4F3B-9F64-5DFE41F04126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C724AA7C-3C17-4F3B-9F64-5DFE41F04126}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A487F1F2-B675-4B01-B71F-5EBE85917F48}
+	EndGlobalSection
+EndGlobal
